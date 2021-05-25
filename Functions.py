@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Functions
-
-# In[2]:
+# Functions used in jupyter-notebooks
 
 
 import numpy as np
 
-
-# In[3]:
 
 
 ## Create binary mask with values 1 for regions of interest (0 or everything else)
@@ -38,9 +34,6 @@ def binary_mask_function(mask,lesions):
         binary_mask = np.where(binary_mask >= 1, 1, binary_mask)
         
         return binary_mask,mask_2
-
-
-# In[13]:
 
 
 
@@ -76,13 +69,6 @@ def combine_images(mask,*args):
     return (combined, coordinates, group)                   
 
 
-# In[5]:
-
-
-
-import math
-import random as rnd
-
 # Find initial cluster centers 
 # iY is input array of images size Nxd
 # N number of all data points (pixels), d number of images
@@ -107,7 +93,7 @@ def kMeansInit( iY, iK ):
     return y0
 
 
-# In[15]:
+
 
 # This function is not yet fully thought out yet
 # It's role is to swap cluster center labels (1 for CSF, 2 for WM and 3 for GM)
@@ -137,7 +123,6 @@ def fix_labels(new_cents,labels,iK):
         return labels, cents_sorted
 
 
-# In[7]:
 
 ## Performs kmeans clustering 
 ## iY = input image size NxD
@@ -180,7 +165,6 @@ def kMeansPP(iY,iK,iMaxIter):
     return centers,labels
 
 
-# In[8]:
 
 ## Classifies membership of pixels to clusters 
 ## iMu are clusters after final iteration of kmeans
@@ -197,8 +181,6 @@ def nonparClassification( iY, iMu ):
     return labels       
 
 
-# In[9]:
-
 
 
 def reconstruction(labels,coordinates):
@@ -212,8 +194,6 @@ def reconstruction(labels,coordinates):
     
     
 
-
-# In[14]:
 
 # Includes all previous functions 
 
@@ -248,8 +228,6 @@ def mrBrainSegmentation( mask,iMaxIter,iK,lesions,*args ):
     
     return reconstructed_image,segmentedLabels, trueLabels
 
-
-# In[11]:
 
 ## For quality of segmentation evaluation
 ## Computes overlap of true and predicted (segmented) labels 

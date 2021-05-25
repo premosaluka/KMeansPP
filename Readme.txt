@@ -6,4 +6,4 @@ In this case we are segmenting 3 types of tissue.
 File ResultsLesions.ipynb contains results of segmentation where GM (grey Matter), WM (white Matter), CSF (cerebrospinal fluid) and lesions were considered. 
 In this case we are segmenting 4 types of tissue.
 
-File functions.py contains all functions used in main notebooks.
+File Functions.py contains all functions used in main notebooks.

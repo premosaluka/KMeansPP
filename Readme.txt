@@ -1,9 +1,25 @@
-Segmentation of breast tissue on MRI sequences (t1-, t2- and pd-weighted) using K-Means clustering.
+# 🧠 Brain Tissue Segmentation on MRI
 
-File Results3D.ipynb contains results of segmentation where GM (grey matter), WM (white matter) and CSF (cerebrospinal fluid) were considered. 
-In this case we are segmenting 3 types of tissue.
+This project performs **segmentation of Brain tissue** on MRI sequences (**T1-, T2-, and PD-weighted**) using **K-Means clustering**.
 
-File ResultsLesions.ipynb contains results of segmentation where GM (grey matter), WM (white matter), CSF (cerebrospinal fluid) and lesions were considered. 
-In this case we are segmenting 4 types of tissue.
+---
 
-File Functions.py contains all functions used in main notebooks.
+## 📂 Project Files
+
+- **`Results3D.ipynb`**  
+  Segmentation results considering:  
+  - GM (Grey Matter)  
+  - WM (White Matter)  
+  - CSF (Cerebrospinal Fluid)  
+  **→ 3 tissue types segmented**
+
+- **`ResultsLesions.ipynb`**  
+  Segmentation results considering:  
+  - GM (Grey Matter)  
+  - WM (White Matter)  
+  - CSF (Cerebrospinal Fluid)  
+  - Lesions  
+  **→ 4 tissue types segmented**
+
+- **`Functions.py`**  
+  Contains all helper functions used in the main notebooks.
